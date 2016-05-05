@@ -3,7 +3,7 @@ package Problem1;
 
 public class Problem1_Groovy {
     public static void main(String[] args) {
-        System.out.println(findNumberOfIntegersThatMultipliesOfAorB(1000, 3, 5));
+        print findNumberOfIntegersThatMultipliesOfAorB(1000, 3, 5)
     }
 
     def static findNumberOfIntegersThatMultipliesOfAorB(int border, int a, int b){
