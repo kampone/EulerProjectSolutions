@@ -7,10 +7,8 @@ class Problem1_Groovy {
     }
 
     static findNumberOfIntegersThatMultipliesOfAorB(int border, int a, int b){
-        int sum = 0
-        (1..<border).each {
-            if (it % a == 0 || it % b == 0) sum += it
-        }
-        sum
+        (1..<border).findAll {
+            !(it % a) || !(it % b)
+        }.sum()
     }
 }
