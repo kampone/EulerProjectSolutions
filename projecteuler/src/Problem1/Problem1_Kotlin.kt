@@ -1,18 +1,19 @@
 package Problem1
 
-data class Multipliers(val first: Int,val second: Int)
 fun main(args: Array<String>) {
     print(
             findNumberOfIntegersThatMultipliesMultipliers(
-                    Multipliers(3,5),
-                    1 until 1000
+                    1 until 1000,
+                    listOf(3,5)
             )
     )
 }
 
-fun findNumberOfIntegersThatMultipliesMultipliers(multipliers: Multipliers, range: IntRange) : Int {
+fun findNumberOfIntegersThatMultipliesMultipliers(range: IntRange, multipliers: List<Int>) : Int {
     return range.filter {
-        it % multipliers.first == 0 ||
-                it % multipliers.second  == 0
+        number ->
+           multipliers.filter{
+               number % it == 0
+           }.isNotEmpty()
     }.sum()
 }
