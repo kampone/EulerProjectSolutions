@@ -4,7 +4,7 @@ import Problem3.Problem3_Groovy
 
 
 class Problem7_Groovy {
-    def static findPrimeNumberWithNumber(long n){
+    static findPrimeNumberWithNumber(long n){
         def numberOfPrimeNumber = 0
         def temp = 0
         while (numberOfPrimeNumber != n){
@@ -16,7 +16,7 @@ class Problem7_Groovy {
         temp
     }
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         print findPrimeNumberWithNumber(10001)
     }
 }

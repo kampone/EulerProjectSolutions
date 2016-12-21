@@ -3,12 +3,12 @@ package Problem4
 class Problem4_Groovy {
 
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         print findMaxPolindromFromMultiply(999, 999)
     }
 
-    def static findMaxPolindromFromMultiply(long factor1, long factor2){
-        def maxPolindrom = 0L;
+    static findMaxPolindromFromMultiply(long factor1, long factor2){
+        def maxPolindrom = 0L
         for (long i = 100; i < factor1; i++) {
             for (long j = 100; j < factor2; j++) {
                 if (isPolindrom(i * j) && maxPolindrom < (i * j)){
@@ -19,7 +19,7 @@ class Problem4_Groovy {
         maxPolindrom
     }
 
-    def static isPolindrom(long number){
+    static isPolindrom(long number){
         def isPolindrom = true
         def stringNumber = number.toString()
         def charArray = stringNumber.toCharArray()

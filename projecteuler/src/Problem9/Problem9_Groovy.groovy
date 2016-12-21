@@ -1,15 +1,15 @@
 package Problem9
 
-import static java.lang.Long.valueOf;
+import static java.lang.Long.valueOf
 
 class Problem9_Groovy {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         def map = findPythagoreanTripletValuesWithSum(1000)
         println map
         print valueOf(map['a'].toString()) * valueOf(map['b'].toString()) * valueOf(map['c'].toString())
     }
 
-    def static findPythagoreanTripletValuesWithSum(long sum){
+    static findPythagoreanTripletValuesWithSum(long sum){
         def result
         for (long a = 1; a < sum; a++) {
             for (long b = 1; b < sum; b++) {

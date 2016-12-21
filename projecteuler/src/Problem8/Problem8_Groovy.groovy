@@ -1,7 +1,7 @@
 package Problem8
 
 class Problem8_Groovy {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         def value = "73167176531330624919225119674426574742355349194934" +
                 "96983520312774506326239578318016984801869478851843" +
                 "85861560789112949495459501737958331952853208805511" +
@@ -26,12 +26,12 @@ class Problem8_Groovy {
         print findGreatestProductForAdjacentDigits(value, 13)
     }
 
-    def static findGreatestProductForAdjacentDigits(String value, int numberOfAdjacentDigits){
-        def max = 0L;
-        def index = 0L;
+    static findGreatestProductForAdjacentDigits(String value, int numberOfAdjacentDigits){
+        def max = 0L
+        def index = 0L
         while(index + numberOfAdjacentDigits <= value.size()){
             def temp = value.substring(index.intValue(), index.intValue() + numberOfAdjacentDigits)
-            def multiply = 1L;
+            def multiply = 1L
             temp.toCharArray().each {
                 multiply *= Integer.valueOf(it.toString())
             }

@@ -2,7 +2,7 @@ package Problem5
 
 class Problem5_Groovy {
 
-    def static nok(IntRange range){
+    static nok(IntRange range){
         long currentNok = 1
 
         range.each {
@@ -11,11 +11,11 @@ class Problem5_Groovy {
         currentNok
     }
 
-    def static nok(long a, long b){
+    static nok(long a, long b){
         (a*b)/nod(a,b)
     }
 
-    def static nod(long a, long b){
+    static nod(long a, long b){
         if(b > a){
             def c = a
             a = b
@@ -30,7 +30,7 @@ class Problem5_Groovy {
         b
     }
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
       print nok(1..20)
     }
 

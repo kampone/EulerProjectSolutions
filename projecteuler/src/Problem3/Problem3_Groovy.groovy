@@ -1,7 +1,7 @@
 package Problem3
 
 class Problem3_Groovy {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         def number = 600851475143
         def value = 1
         def maxFactor = 0
@@ -16,17 +16,17 @@ class Problem3_Groovy {
         }
     }
 
-    def static isPrime(long number) {
+    static isPrime(long number) {
         if (number == 1L) {
             false
         } else {
             long i = 2
-            def flag = true;
+            def flag = true
             while (i**2 <= number && flag) {
                 if (number % i == 0) {
                     flag = false
                 }
-                ++i;
+                ++i
             }
             flag
         }
